@@ -1,16 +1,41 @@
-# React + Vite
+## TO-DO List : React Assignment - Module 3
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project setup
+1. unzip file.
+2. folder don't contain node modules, so just run,
+   npm install
+   command
+3. After successful installation start server using command
+   npm run dev
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+# PRoject Requirement
+1. Done : project is created using Vite and application runs without any error.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Created 4 main component and 3 dummy component
+   2/4 is in src folder Header and App
+   2/4 is in src/component folder.
+   (optional )Dummy Component are just created for routing purpose
 
-## Expanding the ESLint configuration
+3. Hooks used here are :
+   useState to manage stats like user, list, and other imp. stats.
+   useEffect is used when there is any change in list it will update list in local storage, so that whenever you refresh page the todo list don't flush.
+   One of the props is shared from App to ToDOList Component and most of the props are shared parent to its children
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. In ToDoList component each list item is mapped using map function with unique key.
+
+5. Handler used
+   handleDelete : to delete item from the list.
+   handleEdit,handleEditItem : this handles both edit and add functionality, both are separated with ternary operator.
+   handleMarking : this handles the status of the todo list item to make them complete.
+
+6. Designed is light weighted, just kept designed simple and user-friendly.
+   Used tailwind css to style the website.
+
+
+
+
+Links :
+## Github Repository Link = https://github.com/harrysingh17022552/internsala_project4
+## Project depolyment Link = https://todolist-lyart-eight-94.vercel.app/
