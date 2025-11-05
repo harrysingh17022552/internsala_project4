@@ -2,12 +2,18 @@ import { SiTicktick } from "react-icons/si";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 export default function ToDoItem(props) {
+  // using props provided by ToDoList Component (parent component)
   const { item, index, handleMarking, handleDelete, handleEdit } = props;
   return (
+    //this how every row of list will looks like
     <tr>
       <td>{index + 1}</td>
       <td>{item.task}</td>
-      <td className={`${item.status ? "text-green-500" : "text-orange-500 animate-pulse"}`}>
+      <td
+        className={`${
+          item.status ? "text-green-500" : "text-orange-500 animate-pulse"
+        }`}
+      >
         {item.status ? "complete" : "todo"}
       </td>
       <td className="flex flex-row gap-4 items-center justify-center py-2">

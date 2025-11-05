@@ -10,6 +10,8 @@ thead{
     padding: 10px 0;
   }
 }
+
+/* just to hide scrollbar */
 .noscrollbar::-webkit-scrollbar {
   width: 0;
   height: 0;

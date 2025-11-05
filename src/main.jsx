@@ -8,6 +8,8 @@ import E404 from "./dummy_component/E404.jsx";
 import ToDoList from "./component/ToDoList";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+//basic Route, where three cildren used at root path to use some common component
+
 function RootProvider() {
   const router = createBrowserRouter([
     {

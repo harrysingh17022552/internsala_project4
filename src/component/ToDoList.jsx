@@ -4,29 +4,42 @@ import ToDoItem from "./ToDoItem";
 import { data } from "../assets/data";
 
 export default function ToDoList() {
+  // initially checks for recent list exist in local storage or not , otherwise provide default todo list
   const [list, setList] = useState(
     window.localStorage.getItem("todolist")
       ? JSON.parse(window.localStorage.getItem("todolist"))
       : data
   );
+
+  // this generally stores the object of item to be updated or added, type key's value decide between add and edit
   const [edit, setEdit] = useState({
     status: false,
     type: "",
     item: { id: 0, task: "", description: "" },
   });
+
+  //Normal state
   const [showAdd, setShowAdd] = useState(false);
 
+  //triggers when there is any change in list like edit, delete,update. And update list in localstorage
   useEffect(() => {
     window.localStorage.setItem("todolist", JSON.stringify(list));
   }, [list]);
 
+  //this function, generally taked id as argument, looks for id, which is not equal to it and update the item.
   const handleDelete = (id) => {
     setList((prev) => prev.filter((item) => item.id !== id));
   };
+
+  //this function just manage the states, that which section should be visible at particular time 
   const handleEdit = (item, type) => {
     setShowAdd(true);
     setEdit({ status: true, type: type, item: item });
   };
+
+  // this function checks the new/edit todo item is empty or not, and then according to type it changes its path to execute with adding the new item or edit the exist one.
+  // add item generally create new object in array with fields like status, task,description
+  // edit item display the selected item in edit mode after submission the updated content is changed in original array.
   const handleEditItem = () => {
     if (edit.item.task.length > 2 && edit.item.description.length > 2) {
       if (edit.type == "update") {
@@ -62,6 +75,7 @@ export default function ToDoList() {
       setShowAdd(false);
     }
   };
+  //this function just changes status of Todo list item to completed
   const handleMarking = (id) => {
     setList((prev) =>
       prev.map((item) => {

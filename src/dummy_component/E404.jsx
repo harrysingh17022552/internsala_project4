@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+//Dummy Component for Error Page, this will be render when there no such type of path exist, also render when there will be any kind of error
 export default function E404() {
   return (
     <div className="flex flex-col gap-8 w-screen h-screen justify-center items-center p-4">

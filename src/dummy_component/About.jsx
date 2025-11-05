@@ -1,5 +1,4 @@
-import React from "react";
-
+//Dummy Component for About Page, will look better after adding contain
 export default function About() {
   return (
     <div>

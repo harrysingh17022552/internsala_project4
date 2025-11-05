@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 export default function Header({ user }) {
+  //navigation panel to reach different page, used Link to switch the page, it render page without any refresh
   return (
     <header className="w-full bg-black flex gap-4 p-4 items-center justify-between overflow-scroll whitespace-nowrap noscrollbar">
       <div className="flex gap-8 items-center">
