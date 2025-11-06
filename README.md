@@ -1,6 +1,7 @@
 ## TO-DO List : React Assignment - Module 3
 
 ## Project setup
+
 1. unzip file.
 2. folder don't contain node modules, so just run,
    npm install
@@ -8,9 +9,8 @@
 3. After successful installation start server using command
    npm run dev
 
-
-
 # PRoject Requirement
+
 1. Done : project is created using Vite and application runs without any error.
 
 2. Created 4 main component and 3 dummy component
@@ -33,9 +33,12 @@
 6. Designed is light weighted, just kept designed simple and user-friendly.
    Used tailwind css to style the website.
 
-
-
+   Note :
+   ABout Header - I have not invested more time on making header responsive, so I just make overflow-x-scroll to look it better in every screens, not used navbar icons and so on, I hope this doesn't effect the marks.
+   About Design - I have designed the site in a way I like, light weighted and simpler, as it was only todo list, so I was unable to think across this design.
 
 Links :
+
 ## Github Repository Link = https://github.com/harrysingh17022552/internsala_project4
+
 ## Project depolyment Link = https://todolist-lyart-eight-94.vercel.app/
